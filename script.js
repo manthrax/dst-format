@@ -125,7 +125,7 @@ let envMap;
 if(1)new RGBELoader()
   .setPath("")
   .load(
-    "https://cdn.glitch.global/364206c7-9713-48db-9215-72a591a6a9bd/pretville_street_1k.hdr?v=1658931258610",
+    "./assets/pretville_street_1k.hdr",
     function (texture) {
       envMap = pmremGenerator.fromEquirectangular(texture).texture;
 
