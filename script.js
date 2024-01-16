@@ -3,12 +3,12 @@ All the THREEJS boilerplate to set up the app and rendering
 */
 
 import * as THREE from "three";
-import { OrbitControls } from "threeModules/controls/OrbitControls.js";
-import { TGALoader } from "threeModules/loaders/TGALoader.js";
-import { RGBELoader } from "threeModules/loaders/RGBELoader.js";
-import { GLTFLoader } from "threeModules/loaders/GLTFLoader.js";
-import * as BufferGeometryUtils from "threeModules/utils/BufferGeometryUtils.js";
-import { GUI } from "threeModules/libs/lil-gui.module.min.js";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { TGALoader } from "three/addons/loaders/TGALoader.js";
+import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import * as BufferGeometryUtils from "three/addons/utils/BufferGeometryUtils.js";
+import { GUI } from "three/addons/libs/lil-gui.module.min.js";
 
 let {
   Scene,
