@@ -37,7 +37,7 @@ export default function Test({
                 scene.add(lines.mesh);
                 lines.mesh.material.map = tex;
                 lines.mesh.material.normalMap = normalMap;
-                lines.drawRange = 1;
+   
                 gui.add(lines, "quads");
                 gui.add(lines, "drawRange", 0, 1);
                 gui.add(lines, "threadThickness", 0.0, 10);
