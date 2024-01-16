@@ -20,10 +20,10 @@ export default function Test({
   let lcount;
   let texLoader = new THREE.TextureLoader();
   texLoader.load(
-    "./assets/NormalMap%20(10).png",
+    "./assets/threadNormal.png",
     (normalMap) => {
       new THREE.TextureLoader().load(
-        "./assets/image%20(73).jpg",
+        "./assets/threadTexture.jpg",
         (tex) => {
           tex.colorSpace = THREE.SRGBColorSpace;
           tex.wrapS = tex.wrapT = THREE.RepeatWrapping;

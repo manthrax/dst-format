@@ -28,3 +28,33 @@ The `load` method returns an object containing:
 - All parameters specified in "options" can be modified dynamically.
 
 ## Usage
+import DSTLoader from "./DSTLoader.js"
+let texLoader = new THREE.TextureLoader();
+texLoader.load(
+"./assets/threadNormal.png",   //Load the normalmap for the thread texture
+(normalMap) => {
+    new THREE.TextureLoader().load(
+    "./assets/threadTexture.jpg", // Load the thread texture for rendering
+    (tex) => {
+        tex.colorSpace = THREE.SRGBColorSpace;
+        tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+        normalMap.wrapS = normalMap.wrapT = THREE.RepeatWrapping;
+        normalMap.colorSpace = THREE.LinearSRGBColorSpace; //Set some GL gorp on the textures to make em work..
+
+        dstLoader.load(
+            url,  // URL to the .dst file to load
+            (lines) => {
+            scene.add(lines.mesh);  //Add it's .mesh to your scene
+            lines.mesh.material.map = tex; //Set its texture and normalmap
+            lines.mesh.material.normalMap = normalMap;
+            },
+            {
+            threadThickness: 2,   //The thickness of the thread quads
+            jumpThreadThickness: 0.01, //The thickness of "jump threads" those little white threads in the back
+            palette: ["orange", "white", "pink", "white", "black"], //The colors to assign to each color stop in the file, basically the thread colors you want to use
+            })
+        })
+})
+
+
+            
