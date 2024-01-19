@@ -22,10 +22,15 @@ This library provides a loader, parser, and renderer for the `.dst` embroidery m
 
 ## Return Object
 
-The `load` method returns an object containing:
+The `load` method returns a "design" object containing:
 
 - `mesh`: The Mesh or Line primitive.
+- `toTexture(renderer, scene, maxDim, padding = 10)`: Convert the loaded embroidery to a texture, and return the texture.
+    Additionally, after calling toTexture, the design will also contain a .canvas
+    version of the design.
+      
 - All parameters specified in "options" can be modified dynamically.
+
 
 ## Usage
     import DSTLoader from "./DSTLoader.js"
