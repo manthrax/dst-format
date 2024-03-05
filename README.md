@@ -3,6 +3,10 @@
 **Author:** thrax  
 **Date:** January 15, 2024  
 **Live Demo:** https://manthrax.github.io/dst-format/index.html
+
+
+![image](https://github.com/manthrax/dst-format/assets/350247/10d3346a-1436-4ec4-99d0-6cd1ba484b50)
+
 ## Overview
 
 This library provides a loader, parser, and renderer for the `.dst` embroidery machine file format, specifically designed for use with THREE.JS. It allows for rendering stitches to textured geometry, with an option to render to a rendertarget for more efficient display.
